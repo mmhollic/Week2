@@ -4,6 +4,7 @@ import DatabaseEntities.Patient;
 import java.util.ArrayList;
 
 public class HospitalDB {
+    // This class holds a list of doctor objects and a list of patient objects in the hospital
     private ArrayList<Doctor> doctors=new ArrayList<>();
     private ArrayList<Patient> patients=new ArrayList<>();
     public void addDoctor(String name, String pNum, String office){
@@ -15,8 +16,10 @@ public class HospitalDB {
         patients.add(pat);
     }
     public void contactAll(String message){
+        // First contact all the doctors
         for (Doctor doc:doctors)
             doc.contact(message);
+        // Now contact all the patients
         for (Patient pat:patients)
             pat.contact(message);
     }
