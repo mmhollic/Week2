@@ -3,10 +3,12 @@ import DatabaseEntities.Patient;
 
 import java.util.ArrayList;
 
+
 public class HospitalDB {
-    // This class holds a list of doctor objects and a list of patient objects in the hospital
+    // This class holds a list of all items in the hospital
     private ArrayList<Doctor> doctors=new ArrayList<>();
     private ArrayList<Patient> patients=new ArrayList<>();
+
     public void addDoctor(String name, String pNum, String office){
         Doctor doc=new Doctor(name, pNum, office);
         doctors.add(doc);
@@ -23,4 +25,7 @@ public class HospitalDB {
         for (Patient pat:patients)
             pat.contact(message);
     }
+
 }
+
+
