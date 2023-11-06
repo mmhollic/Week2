@@ -3,7 +3,6 @@ package shapes;
 import java.awt.*;
 
 public class Rect extends Shape{
-
     private int width;
     private int height;
 
